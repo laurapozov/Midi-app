@@ -4,18 +4,20 @@ using UnityEngine.UI;
 public class MenuDesplegable : MonoBehaviour
 {
     public Slider sliderBloqueo;
-    public  GameObject menu;
+    public GameObject menu;
+    public GameObject botonMenu;
+
     void Start()
     {
         sliderBloqueo.onValueChanged.AddListener(CambiarMenu);
 
-        //Desbloqueo
+        botonMenu.SetActive(false);
         menu.SetActive(false);
     }
 
     void CambiarMenu(float value)
     {
-        if(value>=1)
+        if (value >= 1)
         {
             MostrarMenu();
         }
@@ -27,11 +29,18 @@ public class MenuDesplegable : MonoBehaviour
 
     void MostrarMenu()
     {
-        menu.SetActive(true);
+        botonMenu.SetActive(true);
+        menu.SetActive(false);
     }
 
     void OcultarMenu()
     {
+        botonMenu.SetActive(false);
         menu.SetActive(false);
+    }
+
+    public void AlternarIconosMenu()
+    {
+        menu.SetActive(!menu.activeSelf);
     }
 }

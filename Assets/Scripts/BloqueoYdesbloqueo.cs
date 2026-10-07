@@ -5,6 +5,9 @@ public class BloqueoYdesbloqueo : MonoBehaviour
 {
    public Slider sliderbloqueo;
    public GameObject pads; 
+   public Image imagenCandado;
+public Sprite candadoNegro;
+public Sprite candadoBlanco;
    private CanvasGroup canvasPads;
     void Start()
     {
@@ -27,14 +30,18 @@ public class BloqueoYdesbloqueo : MonoBehaviour
     }
 
     void Bloquear()
-    {
-        canvasPads.interactable=false;
-        canvasPads.blocksRaycasts=false;
-    }
+{
+    canvasPads.interactable = false;
+    canvasPads.blocksRaycasts = false;
 
-    void Desbloquear()
-    {
-        canvasPads.interactable=true;
-        canvasPads.blocksRaycasts=true;
-    }
+    imagenCandado.sprite = candadoNegro;
+}
+
+   void Desbloquear()
+{
+    canvasPads.interactable = true;
+    canvasPads.blocksRaycasts = true;
+
+    imagenCandado.sprite = candadoBlanco;
+}
 }
