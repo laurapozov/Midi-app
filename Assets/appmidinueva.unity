@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -426, y: 370}
+  m_AnchoredPosition: {x: -529, y: 365}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6554567
@@ -382,7 +382,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4f8e1beae1f37374086ecd2176eb805c, type: 3}
+  m_Resource: {fileID: 8300000, guid: b6ddc049d04032f43acf7c61fddbcfb5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -500,7 +500,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
     m_PressedSprite: {fileID: 7700382695247376890, guid: efbf68bd340170847ac19119e172aa91, type: 3}
     m_SelectedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
-    m_DisabledSprite: {fileID: 7688679314300870848, guid: 052fe22c970943947bfec8c1c76e0fe8, type: 3}
+    m_DisabledSprite: {fileID: 6480613789600914907, guid: c990e24cec2e28341b59695bd1f5aaa1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -925,7 +925,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260918710}
   m_LocalRotation: {x: -0.0120647065, y: 0.99796027, z: 0.036767125, w: -0.050772883}
-  m_LocalPosition: {x: 0, y: 0, z: 109}
+  m_LocalPosition: {x: 0, y: 0, z: 110}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -933,8 +933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -4.138, y: 185.883, z: -1.598}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -796, y: 364}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -819, y: 363}
+  m_SizeDelta: {x: 80, y: 77.8841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260918712
 MonoBehaviour:
@@ -1029,6 +1029,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260918710}
+  m_CullTransparentMesh: 1
+--- !u!1 &322072275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322072276}
+  - component: {fileID: 322072278}
+  - component: {fileID: 322072277}
+  m_Layer: 5
+  m_Name: barramenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &322072276
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322072275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1165732851}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -600, y: 365}
+  m_SizeDelta: {x: 542.6974, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &322072277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322072275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 4661560449325150855, guid: 17834a57f2860ea41aab464a282360c3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &322072278
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322072275}
   m_CullTransparentMesh: 1
 --- !u!1 &332786245
 GameObject:
@@ -1287,7 +1362,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: bd1ca83e9bbbe934e9905830c09d0bb8, type: 3}
+  m_Resource: {fileID: 8300000, guid: 58aea21de1f3b9a42a66f667aa44b1a9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1418,7 +1493,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
     m_PressedSprite: {fileID: 7700382695247376890, guid: efbf68bd340170847ac19119e172aa91, type: 3}
     m_SelectedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
-    m_DisabledSprite: {fileID: 7688679314300870848, guid: 052fe22c970943947bfec8c1c76e0fe8, type: 3}
+    m_DisabledSprite: {fileID: 6480613789600914907, guid: c990e24cec2e28341b59695bd1f5aaa1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1907,7 +1982,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 926ada5f4bf391148b0916461faec0ed, type: 3}
+  m_Resource: {fileID: 8300000, guid: 6d29e903889fc304c9b7fc3f416c822a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2038,7 +2113,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
     m_PressedSprite: {fileID: 7700382695247376890, guid: efbf68bd340170847ac19119e172aa91, type: 3}
     m_SelectedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
-    m_DisabledSprite: {fileID: 7688679314300870848, guid: 052fe22c970943947bfec8c1c76e0fe8, type: 3}
+    m_DisabledSprite: {fileID: 6480613789600914907, guid: c990e24cec2e28341b59695bd1f5aaa1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2562,7 +2637,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: fe98f925fac1bce4aa21c41a93684e47, type: 3}
+  m_Resource: {fileID: 8300000, guid: 97dfe2104c326384a85e022f831203e7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2693,7 +2768,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
     m_PressedSprite: {fileID: 7700382695247376890, guid: efbf68bd340170847ac19119e172aa91, type: 3}
     m_SelectedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
-    m_DisabledSprite: {fileID: 7688679314300870848, guid: 052fe22c970943947bfec8c1c76e0fe8, type: 3}
+    m_DisabledSprite: {fileID: 6480613789600914907, guid: c990e24cec2e28341b59695bd1f5aaa1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3350,7 +3425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -545, y: 367}
+  m_AnchoredPosition: {x: -626, y: 364.06}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137789102
@@ -3515,6 +3590,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 322072276}
   - {fileID: 260918711}
   - {fileID: 2014661216}
   - {fileID: 1137789101}
@@ -3674,7 +3750,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
     m_PressedSprite: {fileID: 7700382695247376890, guid: efbf68bd340170847ac19119e172aa91, type: 3}
     m_SelectedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
-    m_DisabledSprite: {fileID: 7688679314300870848, guid: 052fe22c970943947bfec8c1c76e0fe8, type: 3}
+    m_DisabledSprite: {fileID: 6480613789600914907, guid: c990e24cec2e28341b59695bd1f5aaa1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3760,7 +3836,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 6e3337133a09f6143a17ccb250b01ff9, type: 3}
+  m_Resource: {fileID: 8300000, guid: cb0149e51d6fd6d42aad0bcd8f4dca56, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4265,7 +4341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294, y: 375}
+  m_AnchoredPosition: {x: -426, y: 365}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288505988
@@ -4679,7 +4755,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 85db4514a4dbd1e41a4e6c1318811317, type: 3}
+  m_Resource: {fileID: 8300000, guid: f741c079fee728f429700525a9595d07, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4810,7 +4886,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
     m_PressedSprite: {fileID: 7700382695247376890, guid: efbf68bd340170847ac19119e172aa91, type: 3}
     m_SelectedSprite: {fileID: 184991129517013564, guid: c6750905733edd94c96c1d390ae8fb7a, type: 3}
-    m_DisabledSprite: {fileID: 7688679314300870848, guid: 052fe22c970943947bfec8c1c76e0fe8, type: 3}
+    m_DisabledSprite: {fileID: 6480613789600914907, guid: c990e24cec2e28341b59695bd1f5aaa1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -6019,7 +6095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669, y: 363}
+  m_AnchoredPosition: {x: -720, y: 361.94}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014661217
