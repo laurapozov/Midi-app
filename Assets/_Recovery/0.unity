@@ -2618,6 +2618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuDesplegable
   sliderBloqueo: {fileID: 0}
   menu: {fileID: 0}
+  botonMenu: {fileID: 0}
 --- !u!114 &782404417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3793,6 +3794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BloqueoYdesbloqueo
   sliderbloqueo: {fileID: 1421356221}
   pads: {fileID: 980047528}
+  imagenCandado: {fileID: 0}
+  candadoNegro: {fileID: 0}
+  candadoBlanco: {fileID: 0}
 --- !u!114 &1421356221
 MonoBehaviour:
   m_ObjectHideFlags: 0
