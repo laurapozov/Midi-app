@@ -3,45 +3,79 @@ using UnityEngine.UI;
 
 public class BloqueoYdesbloqueo : MonoBehaviour
 {
-   public Slider sliderbloqueo;
-   public GameObject pads; 
-   public Image imagenCandado;
-public Sprite candadoNegro;
-public Sprite candadoBlanco;
-   private CanvasGroup canvasPads;
+    public Slider sliderbloqueo;
+    public GameObject pads;
+    public Image imagenCandado;
+    public Sprite candadoNegro;
+    public Sprite candadoBlanco;
+
+    private CanvasGroup canvasPads;
+
     void Start()
     {
-        canvasPads = pads.GetComponent<CanvasGroup>();
-        sliderbloqueo.value=0;
-        sliderbloqueo.onValueChanged.AddListener(CambiarEstado);
+        if (pads != null)
+        {
+            canvasPads = pads.GetComponent<CanvasGroup>();
+            if (canvasPads == null)
+            {
+                Debug.LogWarning("BloqueoYdesbloqueo: 'pads' no tiene un componente CanvasGroup.", this);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("BloqueoYdesbloqueo: falta asignar 'pads'.", this);
+        }
+
+        if (sliderbloqueo != null)
+        {
+            sliderbloqueo.value = 0;
+            sliderbloqueo.onValueChanged.AddListener(CambiarEstado);
+        }
+        else
+        {
+            Debug.LogWarning("BloqueoYdesbloqueo: falta asignar 'sliderbloqueo'.", this);
+        }
+
         Desbloquear();
     }
 
     void CambiarEstado(float value)
     {
-      if(value>=1)
+        if (value >= 1f)
         {
             Bloquear();
-        }  
+        }
         else
-         {
-           Desbloquear(); 
-         }
+        {
+            Desbloquear();
+        }
     }
 
     void Bloquear()
-{
-    canvasPads.interactable = false;
-    canvasPads.blocksRaycasts = false;
+    {
+        if (canvasPads != null)
+        {
+            canvasPads.interactable = false;
+            canvasPads.blocksRaycasts = false;
+        }
 
-    imagenCandado.sprite = candadoNegro;
-}
+        if (imagenCandado != null && candadoNegro != null)
+        {
+            imagenCandado.sprite = candadoNegro;
+        }
+    }
 
-   void Desbloquear()
-{
-    canvasPads.interactable = true;
-    canvasPads.blocksRaycasts = true;
+    void Desbloquear()
+    {
+        if (canvasPads != null)
+        {
+            canvasPads.interactable = true;
+            canvasPads.blocksRaycasts = true;
+        }
 
-    imagenCandado.sprite = candadoBlanco;
-}
+        if (imagenCandado != null && candadoBlanco != null)
+        {
+            imagenCandado.sprite = candadoBlanco;
+        }
+    }
 }

@@ -1,43 +1,64 @@
-using Unity.VisualScripting;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Tutorial : MonoBehaviour,IPointerClickHandler
+public class Tutorial : MonoBehaviour
 {
     [Header("Elementos del tutorial")]
     [SerializeField] private GameObject panelTutorial;
     [SerializeField] private Image imagenPaso;
 
+    [Header("Botones de flechas")]
+    [SerializeField] private Button botonSiguiente;
+    [SerializeField] private Button botonAnterior;
+
     [Header("Assets de los pasos")]
     [SerializeField] private Sprite[] pasosTutorial;
+
     private int pasoActual = 0;
     private bool tutorialActivo = false;
 
     void Start()
     {
-        panelTutorial.SetActive(false);
+        if (panelTutorial != null)
+        {
+            panelTutorial.SetActive(false);
+        }
+
+        if (botonSiguiente != null)
+        {
+            botonSiguiente.onClick.AddListener(SiguientePaso);
+        }
+
+        if (botonAnterior != null)
+        {
+            botonAnterior.onClick.AddListener(PasoAnterior);
+        }
+
+        ActualizarBotones();
     }
 
-    // Update is called once per frame
-     public void IniciarTutorial()
+    public void IniciarTutorial()
     {
         if (pasosTutorial == null || pasosTutorial.Length == 0)
         {
-            Debug.LogWarning("No hay pasos asignados al tutorial."); return;
+            Debug.LogWarning("No hay pasos asignados al tutorial.");
+            return;
         }
 
         pasoActual = 0;
         tutorialActivo = true;
 
-        panelTutorial.SetActive(true);
+        if (panelTutorial != null)
+        {
+            panelTutorial.SetActive(true);
+        }
 
         MostrarPaso();
     }
 
-      public void OnPointerClick(PointerEventData eventData)
+    public void SiguientePaso()
     {
-        if (!tutorialActivo)
+        if (!tutorialActivo || pasosTutorial == null || pasosTutorial.Length == 0)
             return;
 
         pasoActual++;
@@ -52,16 +73,45 @@ public class Tutorial : MonoBehaviour,IPointerClickHandler
         }
     }
 
-     public void FinalizarTutorial()
+    public void PasoAnterior()
+    {
+        if (!tutorialActivo || pasosTutorial == null || pasosTutorial.Length == 0)
+            return;
+
+        if (pasoActual > 0)
+        {
+            pasoActual--;
+            MostrarPaso();
+        }
+    }
+
+    public void FinalizarTutorial()
     {
         tutorialActivo = false;
-        panelTutorial.SetActive(false);
+
+        if (panelTutorial != null)
+        {
+            panelTutorial.SetActive(false);
+        }
 
         Debug.Log("Tutorial finalizado.");
     }
 
     private void MostrarPaso()
     {
-        imagenPaso.sprite = pasosTutorial[pasoActual];
+        if (imagenPaso != null && pasosTutorial != null && pasoActual >= 0 && pasoActual < pasosTutorial.Length)
+        {
+            imagenPaso.sprite = pasosTutorial[pasoActual];
+        }
+
+        ActualizarBotones();
+    }
+
+    private void ActualizarBotones()
+    {
+        if (botonAnterior != null)
+        {
+            botonAnterior.gameObject.SetActive(tutorialActivo && pasoActual > 0);
+        }
     }
 }

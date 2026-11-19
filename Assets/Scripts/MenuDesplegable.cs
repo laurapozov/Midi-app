@@ -9,15 +9,21 @@ public class MenuDesplegable : MonoBehaviour
 
     void Start()
     {
-        sliderBloqueo.onValueChanged.AddListener(CambiarMenu);
+        if (sliderBloqueo != null)
+        {
+            sliderBloqueo.onValueChanged.AddListener(CambiarMenu);
+        }
+        else
+        {
+            Debug.LogWarning("MenuDesplegable: falta asignar 'sliderBloqueo'.", this);
+        }
 
-        botonMenu.SetActive(false);
-        menu.SetActive(false);
+        OcultarMenu();
     }
 
     void CambiarMenu(float value)
     {
-        if (value >= 1)
+        if (value >= 1f)
         {
             MostrarMenu();
         }
@@ -29,18 +35,37 @@ public class MenuDesplegable : MonoBehaviour
 
     void MostrarMenu()
     {
-        botonMenu.SetActive(true);
-        menu.SetActive(false);
+        if (botonMenu != null)
+        {
+            botonMenu.SetActive(true);
+        }
+
+        // Si quieres que 'menu' aparezca solo al pulsar botonMenu, déjalo en false.
+        // Si quieres que aparezca de inmediato al deslizar arriba, cámbialo a true.
+        if (menu != null)
+        {
+            menu.SetActive(false);
+        }
     }
 
     void OcultarMenu()
     {
-        botonMenu.SetActive(false);
-        menu.SetActive(false);
+        if (botonMenu != null)
+        {
+            botonMenu.SetActive(false);
+        }
+
+        if (menu != null)
+        {
+            menu.SetActive(false);
+        }
     }
 
     public void AlternarIconosMenu()
     {
-        menu.SetActive(!menu.activeSelf);
+        if (menu != null)
+        {
+            menu.SetActive(!menu.activeSelf);
+        }
     }
 }
